@@ -152,7 +152,7 @@ VEML7700_ENABLED = True    # Enable/disable light sensor
 
 ```
 esp32c3-datalogger/
-├── main.py              # Main application code
+├── ESP32C3Datalogger.py # Main application code
 ├── bme680.py            # BME680 sensor library
 ├── README.md            # This file
 ├── Schematic.png        # Circuit schematic
@@ -185,18 +185,3 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 - BME680 library from Robert Hammelrath
 - Thanks to the MicroPython community
 - Thanks to Espressif for making such great SoC's
-
-## Author
-
-Tom Herbison
-- GitHub: mi0iou
-
-## Support
-
-If you find this project helpful, please ⭐ star this repository!
-
-For issues or questions, please open an issue on GitHub.
-
----
-
-**Built with ❤️ using ESP32-C3 and MicroPython**
