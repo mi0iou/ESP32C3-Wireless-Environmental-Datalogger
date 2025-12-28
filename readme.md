@@ -18,7 +18,7 @@ A wireless environmental monitoring station built with the ESP32-C3 microcontrol
 
 | Component | Quantity | Notes |
 |-----------|----------|-------|
-| ESP32-C3 Super Mini | 1 | |
+| ESP32-C3 Super Mini | 1 | or other ESP32C3 board |
 | BME680 Sensor Module | 1 | I2C address: 0x76 |
 | VEML7700 Light Sensor | 1 | I2C address: 0x10 |
 | 4.7kΩ Resistors | 2 | I2C pull-ups (SDA, SCL) |
@@ -63,14 +63,14 @@ This may be done using Thonny's "Configure interpreter" option
 
 ### 2. Configure WiFi
 
-Edit the main script and update your WiFi credentials:
+Edit the main program to include your WiFi credentials:
 ```python
 SSID = "YourNetworkName"
 PASSWORD = "YourPassword"
 ```
+Save the main program as "main.py"
 
-### 4. Upload Main Script and 
-
+### 4. Upload Main Script and BME680 driver
 Upload `main.py` and "bme680.py" to the ESP32-C3
 
 ### 5. Reboot
