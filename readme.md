@@ -50,7 +50,7 @@ See `Schematic.png` and `Breadboard.png` for detailed wiring diagrams.
 ### Prerequisites
 
 - **MicroPython** firmware for ESP32-C3 (v1.20 or later)
-- **bme680.py** required library - [Download here](https://github.com/robert-hh/BME680-Micropython)
+- **bme680.py** required library (copy included in repo you can [Download here](https://github.com/robert-hh/BME680-Micropython)
 - USB cable for programming
 - Terminal program (Thonny or similar)
 - project includes a custom VEML7700 driver.
