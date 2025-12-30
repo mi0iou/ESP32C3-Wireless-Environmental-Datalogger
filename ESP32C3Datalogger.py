@@ -234,14 +234,16 @@ def init_light_sensor(i2c):
         return None
 
 def read_light_sensor(light_sensor):
-    """Read light level in lux"""
+    """Read light level in lux - thread safe"""
     if light_sensor is None:
         return None
-    try:
-        return light_sensor.read_lux()
-    except Exception as e:
-        print("Light sensor read error:", e)
-        return None
+    
+    with sensor_lock:
+        try:
+            return light_sensor.read_lux()
+        except Exception as e:
+            print("Light sensor read error:", e)
+            return None
 
 # --- BME680 Sensor ---
 def init_sensor(i2c):
@@ -772,7 +774,7 @@ sync_time()
 
 # Initialize I2C bus (shared by both sensors)
 print("Initializing I2C bus...")
-i2c = I2C(0, scl=Pin(21), sda=Pin(20), freq=100000)
+i2c = I2C(0, scl=Pin(21), sda=Pin(20), freq=10000)
 
 # Scan I2C bus
 print("Scanning I2C bus...")
