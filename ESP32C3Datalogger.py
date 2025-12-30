@@ -774,7 +774,7 @@ sync_time()
 
 # Initialize I2C bus (shared by both sensors)
 print("Initializing I2C bus...")
-i2c = I2C(0, scl=Pin(21), sda=Pin(20), freq=10000)
+i2c = I2C(0, scl=Pin(21), sda=Pin(20), freq=100000)
 
 # Scan I2C bus
 print("Scanning I2C bus...")
@@ -862,4 +862,5 @@ while True:
     except Exception as e:
         print("Main loop error:", e)
         gc.collect()
+
         time.sleep(LOG_INTERVAL)
